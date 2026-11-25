@@ -9,7 +9,6 @@ public class BombBrick : BaseBrick
 
     public override void TakeHit()
     {
-        Debug.Log("hit detected");
         Explode();
     }
 
