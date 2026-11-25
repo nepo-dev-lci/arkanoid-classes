@@ -24,15 +24,7 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if we hit a brick
-        BaseBrick brick = collision.gameObject.GetComponent<BaseBrick>();
-        if (brick != null)
-        {
-            // This single line works for ALL brick types because of inheritance.
-            // A BasicBrick will break. A ToughBrick will lose 1 health.
-            // A BombBrick will override TakeHit() and explode.
-            brick.TakeHit();
-        }
+        // TODO if the collision's game object has a BaseBrick component, call its TakeHit() method
 
         // Optional: Add a slight random angle on paddle hits to avoid endless loops
         if (collision.gameObject.CompareTag("Paddle"))
